@@ -240,3 +240,118 @@ body {
     top: -18px;
   }
 }
+.prestations {
+  max-width: 1020px;
+  margin: 0 auto 60px auto;
+  padding: 0 12px;
+  text-align: left;
+}
+
+.prestations h2 {
+  font-size: 1.65rem;
+  color: #21313f;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 0.01em;
+}
+
+.prestations-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.prestation-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px rgba(19,49,87,0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 215px;
+  padding: 18px 15px 16px 15px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 220px;
+  text-align: center;
+}
+
+.prestation-card:hover {
+  box-shadow: 0 8px 28px rgba(19,49,87,0.18);
+  transform: translateY(-4px) scale(1.04);
+}
+
+.prestation-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 13px;
+  border: 2px solid #d8f4ef;
+  background: #eafdfa;
+}
+
+.prestation-card h3 {
+  font-size: 1.07rem;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #175c62;
+  letter-spacing: 0.01em;
+}
+
+.prestation-card p {
+  font-size: 0.97rem;
+  color: #444;
+  margin: 0;
+  font-weight: 400;
+}
+
+.prestations-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 100px;
+  border: 2px solid #15b2b5;
+  color: #15b2b5;
+  background: #fff;
+  font-weight: 600;
+  font-size: 1.06rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  background: #15b2b5;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .prestations-cards {
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+  }
+  .prestation-card {
+    width: 44vw;
+    min-width: 180px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .prestations-cards {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .prestation-card {
+    width: 92vw;
+    min-width: 150px;
+    padding: 14px 7px;
+  }
+  .prestations {
+    padding: 0 3px;
+  }
+}

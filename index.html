@@ -5,63 +5,185 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>KPe – Électricien à Plouër-sur-Rance</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <img src="Images/logo_kpe.jpg" alt="KPe" class="logo">
-    <nav>
-      <a href="index.html" class="active">Accueil</a>
-      <a href="prestations.html">Prestations</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="avis.html">Avis</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container flex-header">
+      <div class="logo-box">
+        <img src="Images/logo_kpe.jpg" alt="KPe" class="logo">
+        <span class="slogan">L’électricité, notre métier, votre sérénité</span>
+      </div>
+      <nav>
+        <a href="index.html" class="active">Accueil</a>
+        <a href="prestations.html">Prestations</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="avis.html">Avis</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-contacts">
+        <a href="tel:0601020304">06 01 02 03 04</a>
+        <a href="mailto:contact@kpe.fr">contact@kpe.fr</a>
+      </div>
+    </div>
   </header>
+  <section class="hero">
+    <div class="hero-overlay">
+      <span class="badge-local">Artisan local • Saint-Malo, Plouër-sur-Rance</span>
+      <h1>Votre électricien de confiance</h1>
+      <p>Installation, rénovation, dépannage, borne de recharge et domotique</p>
+      <a href="contact.html" class="cta">Demandez votre devis gratuit</a>
+    </div>
+  </section>
   <main>
-    <section class="hero">
-      <img src="Images/les_remparts_de_saint_malo-scaled.jpeg" alt="Saint-Malo" class="hero-img">
-      <div class="hero-text">
-        <h1>Électricien à Plouër-sur-Rance</h1>
-        <p>Installation, rénovation, dépannage et bornes de recharge</p>
+    <!-- Réassurance -->
+    <section class="reassurance">
+      <div class="container flex-reassurance">
+        <div>
+          <img src="Images/garantie.png" alt="" class="icon">
+          <h3>Garantie décennale</h3>
+          <p>Votre tranquillité assurée sur tous les travaux</p>
+        </div>
+        <div>
+          <img src="Images/label.png" alt="" class="icon">
+          <h3>Artisan certifié</h3>
+          <p>Qualifelec & label RGE</p>
+        </div>
+        <div>
+          <img src="Images/chrono.png" alt="" class="icon">
+          <h3>Intervention rapide</h3>
+          <p>Urgence 7j/7, devis sous 48h</p>
+        </div>
+        <div>
+          <img src="Images/satisfaction.png" alt="" class="icon">
+          <h3>+150 avis clients</h3>
+          <p>Note 5 étoiles sur Google</p>
+        </div>
       </div>
     </section>
-    <section class="container">
-      <h2>Bienvenue</h2>
-      <p>Professionnel de l'électricité, Kévin PIRON intervient sur la région de Saint-Malo et ses alentours. Artisan de confiance, je vous accompagne dans tous vos projets électriques, en neuf comme en rénovation.</p>
-      <hr>
-      <h2>Prestations</h2>
-      <div class="grid">
-        <div>
-          <img src="Images/AdobeStock_38047551.jpeg" alt="Tableaux électriques">
-          <p>Tableaux électriques</p>
+
+    <!-- Prestations -->
+    <section class="prestations">
+      <div class="container">
+        <h2>Nos prestations</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="Images/AdobeStock_38047551.jpeg" alt="Tableaux électriques">
+            <h3>Tableaux électriques</h3>
+            <p>Mise aux normes, remplacement, dépannage</p>
+          </div>
+          <div class="card">
+            <img src="Images/20240824_173252.jpeg" alt="Installation dépannage">
+            <h3>Installation & Dépannage</h3>
+            <p>Maisons, appartements, tertiaire, domotique</p>
+          </div>
+          <div class="card">
+            <img src="Images/AdobeStock_56384563.jpeg" alt="Énergies renouvelables">
+            <h3>Énergies renouvelables</h3>
+            <p>Pose de panneaux solaires, solutions éco-responsables</p>
+          </div>
+          <div class="card">
+            <img src="Images/AdobeStock_35162624 2.jpeg" alt="Réseaux et antennes">
+            <h3>Réseaux & antennes</h3>
+            <p>Vidéosurveillance, réseaux informatiques</p>
+          </div>
         </div>
-        <div>
-          <img src="Images/20240824_173252.jpeg" alt="Installation dépannage">
-          <p>Installation & Dépannage</p>
-        </div>
-        <div>
-          <img src="Images/AdobeStock_56384563.jpeg" alt="Énergies renouvelables">
-          <p>Énergies renouvelables</p>
-        </div>
-        <div>
-          <img src="Images/AdobeStock_35162624 2.jpeg" alt="Réseaux et antennes">
-          <p>Réseaux et antennes</p>
-        </div>
+        <a href="prestations.html" class="cta-secondary">Voir toutes nos prestations</a>
       </div>
-      <hr>
-      <h2>Réalisations</h2>
-      <div class="grid">
-        <img src="Images/AdobeStock_225354028.jpeg" alt="Réalisations 1">
-        <img src="Images/AdobeStock_218389387.jpeg" alt="Réalisations 2">
-        <img src="Images/AdobeStock_3905948 2.jpeg" alt="Réalisations 3">
+    </section>
+
+    <!-- Réalisations -->
+    <section class="realisations">
+      <div class="container">
+        <h2>Réalisations</h2>
+        <div class="cards">
+          <div class="card"><img src="Images/AdobeStock_225354028.jpeg" alt="Maison rénovée"></div>
+          <div class="card"><img src="Images/AdobeStock_218389387.jpeg" alt="Tableau électrique"></div>
+          <div class="card"><img src="Images/AdobeStock_3905948 2.jpeg" alt="Eclairage LED"></div>
+        </div>
+        <a href="realisations.html" class="cta-secondary">Voir plus de réalisations</a>
       </div>
-      <hr>
-      <h2>Vos avis</h2>
-      <blockquote>“Électricien très réactif, ponctuel et travail soigné. Je recommande sans hésiter.” <br><small>– Client Google</small></blockquote>
+    </section>
+
+    <!-- Avis Google -->
+    <section class="avis">
+      <div class="container">
+        <h2>Ils nous ont fait confiance</h2>
+        <div class="avis-list">
+          <div class="avis-item">
+            <span class="stars">★★★★★</span>
+            <p>Travail impeccable, ponctuel et très pro. Merci Kévin !</p>
+            <span class="author">– Julie L.</span>
+          </div>
+          <div class="avis-item">
+            <span class="stars">★★★★★</span>
+            <p>Un artisan à recommander, réactif et de bon conseil.</p>
+            <span class="author">– Marc D.</span>
+          </div>
+          <div class="avis-item">
+            <span class="stars">★★★★★</span>
+            <p>Dépannage en urgence et prix honnête. Je recommande !</p>
+            <span class="author">– Clara P.</span>
+          </div>
+        </div>
+        <a href="https://www.google.com/search?q=KPe+Avis" class="cta-secondary" target="_blank">Voir tous les avis</a>
+      </div>
+    </section>
+
+    <!-- Zone d’intervention -->
+    <section class="zone">
+      <div class="container">
+        <h2>Zone d’intervention</h2>
+        <p>Saint-Malo, Plouër-sur-Rance, Dinan, Dinard, Cancale, Côte d’Émeraude…</p>
+        <!-- Option : insérer une carte Google Maps en iframe ou une image de la zone -->
+      </div>
+    </section>
+
+    <!-- Contact rapide -->
+    <section class="contact-home">
+      <div class="container">
+        <h2>Un projet ? Besoin d’un devis ?</h2>
+        <a href="contact.html" class="cta">Contactez Kévin</a>
+        <p class="phone-mail">Ou appelez au <a href="tel:0601020304">06 01 02 03 04</a></p>
+      </div>
     </section>
   </main>
+
   <footer>
-    <p>KPe – Kévin PIRON | Plouër-sur-Rance – <a href="tel:0601020304">06 01 02 03 04</a> – <a href="mailto:contact@kpe.fr">contact@kpe.fr</a> – <a href="#">Mentions légales</a></p>
+    <div class="container">
+      <div class="footer-cols">
+        <div>
+          <h4>Contact</h4>
+          <p>Kévin PIRON – KPe</p>
+          <p>Plouër-sur-Rance, Saint-Malo</p>
+          <p><a href="tel:0601020304">06 01 02 03 04</a><br>
+          <a href="mailto:contact@kpe.fr">contact@kpe.fr</a></p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="prestations.html">Prestations</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="avis.html">Avis</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Mentions</h4>
+          <ul>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Labels</h4>
+          <img src="Images/label.png" alt="Qualifelec" style="max-width:70px;"><br>
+          <img src="Images/garantie.png" alt="Garantie décennale" style="max-width:70px;">
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 KPe – Kévin PIRON – Site réalisé avec passion ❤️</p>
+    </div>
   </footer>
 </body>
 </html>

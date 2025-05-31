@@ -1,27 +1,28 @@
 :root {
   --primary: #0d2538;
   --secondary: #18c3e5;
-  --accent: #45d6c6;
+  --accent: #4bc159;
   --bg: #f9fafb;
   --card-bg: #fff;
   --text-main: #18243c;
   --text-soft: #4a5568;
   --border: #e0e6ed;
-  --radius: 13px;
-  --shadow: 0 2px 12px 0 rgba(16,30,54,0.06);
+  --radius: 14px;
+  --shadow: 0 2px 14px 0 rgba(16,30,54,0.06);
   --nav-height: 64px;
   --logo-size: 54px;
   --transition: all 0.22s cubic-bezier(.4,0,.2,1);
-  font-family: 'Segoe UI', 'Arial', sans-serif;
 }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text-main);
-  font-family: var(--font-main);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 17px;
 }
 
+/* ===== HEADER ===== */
 .top-bar {
   background: var(--primary);
   color: #fff;
@@ -86,7 +87,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 1.05rem;
-  padding: 4px 0 4px 0;
+  padding: 4px 0;
   position: relative;
   transition: var(--transition);
 }
@@ -95,6 +96,8 @@ body {
 .main-nav a:hover {
   color: var(--secondary);
 }
+
+/* ===== HERO ===== */
 .hero {
   position: relative;
   height: 330px;
@@ -178,6 +181,8 @@ body {
   background: #17a3c8;
   color: #fff;
 }
+
+/* ===== BADGES QUALITES ===== */
 .badges-qualites {
   display: flex;
   justify-content: center;
@@ -218,28 +223,7 @@ body {
   letter-spacing: 0.01em;
 }
 
-@media (max-width: 850px) {
-  .badges-qualites {
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 14px 6px 5px 6px;
-    max-width: 98vw;
-  }
-  .badge-qualite {
-    min-width: 135px;
-    font-size: 0.93rem;
-  }
-}
-@media (max-width: 600px) {
-  .badges-qualites {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    padding: 8px 2px 2px 2px;
-    margin-bottom: 10px;
-    top: -18px;
-  }
-}
+/* ===== PRESTATIONS ===== */
 .prestations {
   max-width: 1020px;
   margin: 0 auto 60px auto;
@@ -329,32 +313,7 @@ body {
   color: #fff;
 }
 
-@media (max-width: 900px) {
-  .prestations-cards {
-    flex-wrap: wrap;
-    gap: 18px;
-    justify-content: center;
-  }
-  .prestation-card {
-    width: 44vw;
-    min-width: 180px;
-    max-width: 300px;
-  }
-}
-@media (max-width: 600px) {
-  .prestations-cards {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .prestation-card {
-    width: 92vw;
-    min-width: 150px;
-    padding: 14px 7px;
-  }
-  .prestations {
-    padding: 0 3px;
-  }
-}
+/* ===== REALISATIONS ===== */
 .realisations {
   max-width: 1020px;
   margin: 0 auto 60px auto;
@@ -417,28 +376,7 @@ body {
   margin-top: 12px;
 }
 
-@media (max-width: 900px) {
-  .realisations-gallery {
-    gap: 14px;
-    justify-content: center;
-  }
-  .real-card {
-    width: 40vw;
-    min-width: 150px;
-    max-width: 250px;
-  }
-}
-@media (max-width: 600px) {
-  .realisations-gallery {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .real-card {
-    width: 94vw;
-    min-width: 100px;
-    padding: 0;
-  }
-}
+/* ===== AVIS CLIENTS ===== */
 .avis {
   max-width: 1020px;
   margin: 0 auto 50px auto;
@@ -508,24 +446,44 @@ body {
   margin-top: 8px;
 }
 
-@media (max-width: 900px) {
-  .avis-cards {
-    gap: 11px;
-    justify-content: center;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1050px) {
+  .prestations-cards,
+  .realisations-gallery,
+  .avis-cards,
+  .badges-qualites {
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: flex-start;
   }
+  .real-card,
+  .prestation-card,
   .avis-card {
-    min-width: 120px;
+    width: 42vw;
+    min-width: 130px;
     max-width: 260px;
   }
 }
-@media (max-width: 600px) {
-  .avis-cards {
-    flex-direction: column;
-    gap: 7px;
-  }
-  .avis-card {
-    max-width: 96vw;
-    min-width: 100px;
-    padding: 15px 7px 10px 7px;
-  }
+
+@media (max-width: 700px) {
+  .nav-content { padding: 0 6vw; }
+  .logo-nav { height: 40px; }
+  .main-nav ul { gap: 15px; }
+  .hero { height: 180px; }
+  .hero-content { padding: 8px 2vw; }
+  .badges-qualites { flex-direction: column; align-items: stretch; gap: 6px; top: -18px; }
+  .prestations-cards,
+  .realisations-gallery,
+  .avis-cards { flex-direction: column; align-items: stretch; }
+  .prestation-card,
+  .real-card,
+  .avis-card { width: 90vw; min-width: 110px; }
+  section { padding: 0 2vw; }
+}
+
+@media (max-width: 420px) {
+  .prestation-card,
+  .real-card,
+  .avis-card { width: 97vw; min-width: 80px; }
+  .badges-qualites { padding: 6px 2px; }
 }

@@ -1,93 +1,133 @@
+/* --- Police & Base --- */
 body {
-  font-family: 'Montserrat', Arial, sans-serif;
-  background: #fff;
-  color: #1b3147;
-  margin: 0; padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fafbfc;
+  color: #182333;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
-
-header { background: #011627; }
-.flex-header {
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 10px 0 4px 0;
-}
-.logo { height: 54px; }
-.slogan { color: #99e0ff; font-size: 0.97rem; margin-left: 14px; }
-nav a {
-  color: #fff;
+a {
+  color: #1092A3;
   text-decoration: none;
-  margin-left: 24px;
-  font-size: 1.01rem;
+  transition: color 0.2s;
+}
+
+a:hover, .cta:hover, .cta-secondary:hover {
+  color: #1c3c54;
+}
+
+h1, h2, h3 {
+  font-family: inherit;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.5rem; color: #193a48; }
+h3 { font-size: 1.15rem; }
+
+/* --- Header --- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 14px 42px 8px 24px;
+  box-shadow: 0 2px 10px rgba(30,56,81,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  height: 54px;
+  margin-right: 30px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  font-size: 1rem;
+  color: #20323b;
   font-weight: 500;
-  letter-spacing: 0.01em;
-  transition: color 0.18s;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
 }
-nav a.active, nav a:hover { color: #15aabf; }
-.header-contacts a {
-  color: #fff; text-decoration: none; margin-left: 14px; font-size: 1rem;
+
+nav a.active, nav a:hover {
+  background: #e6f7fa;
+  color: #1092A3;
 }
+
+/* --- Hero --- */
 .hero {
-  background: url('Images/les_remparts_de_saint_malo-scaled.jpeg') center/cover no-repeat;
-  height: 380px; display: flex; align-items: center; justify-content: center; position: relative;
+  position: relative;
+  min-height: 320px;
+  background: #eee center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-bottom: 0px;
 }
+
 .hero-overlay {
-  background: rgba(1,22,39,0.62); color: #fff; padding: 36px 52px;
-  border-radius: 20px; text-align: center; box-shadow: 0 8px 32px rgba(1,22,39,0.08);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(30,50,80,0.40) 0%, rgba(255,255,255,0.15) 100%);
+  z-index: 1;
 }
-.badge-local {
-  display: inline-block; background: #15aabf; color: #fff;
-  border-radius: 14px; padding: 5px 14px; font-size: 0.98rem;
-  margin-bottom: 10px; letter-spacing: 0.04em;
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 36px 36px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.hero-overlay h1 { font-size: 2.5rem; font-weight: 700; margin: 0 0 9px 0; }
-.hero-overlay p { font-size: 1.13rem; margin-bottom: 14px; }
-.cta, .cta-secondary {
-  background: #15aabf; color: #fff;
-  padding: 11px 30px; border-radius: 8px; text-decoration: none; font-weight: 600;
-  font-size: 1.08rem; transition: background .18s; margin: 8px;
+
+.badge {
   display: inline-block;
+  background: #1092A3;
+  color: #fff;
+  font-size: 0.97rem;
+  border-radius: 19px;
+  padding: 7px 17px;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
 }
-.cta-secondary { background: #fff; color: #15aabf; border: 1.5px solid #15aabf; }
-.cta-secondary:hover, .cta:hover { background: #0a9396; color: #fff; }
-.reassurance .flex-reassurance {
-  display: flex; justify-content: space-around; gap: 30px; flex-wrap: wrap; margin: 36px 0;
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  color: #fff;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 12px rgba(30,40,60,0.25);
+  font-weight: 800;
 }
-.reassurance h3 { color: #0a9396; margin-bottom: 4px; margin-top: 10px; }
-.icon { height: 36px; margin-bottom: 7px; }
-.cards { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
-.card {
-  background: #fff; box-shadow: 0 2px 8px rgba(1,22,39,0.08);
-  border-radius: 14px; padding: 18px 14px 10px 14px;
-  flex: 1 1 220px; max-width: 260px; margin-bottom: 24px;
-  display: flex; flex-direction: column; align-items: center;
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 26px;
+  color: #f3f8fa;
+  text-shadow: 0 1px 7px rgba(30,40,60,0.19);
 }
-.card img {
-  width: 100%; max-width: 150px; height: 100px; object-fit: cover;
-  border-radius: 8px; margin-bottom: 10px;
-}
-.card h3 { margin: 0; font-size: 1.07rem; color: #011627; }
-.avis-list { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
-.avis-item { background: #f8fafd; border-radius: 8px; box-shadow: 0 2px 6px rgba(21,170,191,0.04); padding: 16px 18px; width: 250px; }
-.stars { color: #15aabf; font-size: 1.2rem; }
-.author { color: #0a9396; font-size: 0.96rem; margin-top: 4px; display: inline-block; }
-.zone { background: #f6f7fa; }
-.zone h2 { color: #011627; }
-.contact-home { background: #e6f7f9; text-align: center; padding: 26px 0 18px 0;}
-.phone-mail { margin-top: 8px; font-size: 1.08rem; }
-footer { background: #011627; color: #fff; text-align: center; padding: 32px 0 8px 0; font-size: 1rem; }
-.footer-cols { display: flex; gap: 38px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
-.footer-cols h4 { color: #15aabf; font-size: 1.07rem; margin-bottom: 7px;}
-.footer-cols ul { list-style: none; margin: 0; padding: 0;}
-.footer-cols ul li { margin-bottom: 5px;}
-.footer-copy { margin-top: 20px; color: #fff; opacity: 0.7; font-size: 0.98rem;}
-footer a { color: #15aabf; text-decoration: none; }
-@media (max-width: 1100px) {
-  .footer-cols { flex-direction: column; align-items: center;}
-  .flex-header { flex-direction: column; align-items: flex-start;}
-}
-@media (max-width: 700px) {
-  .hero { height: 170px; }
-  .hero-overlay { padding: 16px 3vw; }
-  .container { padding: 0 8px; }
-  .cards { flex-direction: column; gap: 12px; align-items: center;}
-}
+
+.cta {
+  display: inline-block;
+  background: #4bc159;
+  color: #fff;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 9px;
+  font-size: 1.15rem;
+  margin-top: 5px;

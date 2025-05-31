@@ -6,18 +6,26 @@ body {
   padding: 0;
 }
 
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
-  padding: 24px 40px 8px 40px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 24px 0 8px 0;
 }
 
-header img {
-  height: 70px;
-  margin-right: 24px;
+.logo {
+  height: 60px;
 }
 
 nav a {
@@ -26,115 +34,183 @@ nav a {
   font-weight: 500;
   margin-left: 32px;
   transition: color 0.2s;
+  font-size: 1rem;
 }
-
+nav a.active,
 nav a:hover {
   color: #4bc159;
 }
 
 .hero {
-  background: url('Images/les_remparts_de_saint_malo-scaled.jpeg') center/cover no-repeat;
-  min-height: 350px;
+  position: relative;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 60px;
-  color: #222;
-  position: relative;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(255,255,255,0.93);
+  border-radius: 14px;
+  padding: 32px 48px 22px 48px;
+  text-align: center;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.03);
 }
 
 .hero h1 {
-  font-size: 3.2rem;
+  font-size: 2.3rem;
   font-weight: bold;
-  margin-bottom: 16px;
-  background: rgba(255,255,255,0.86);
-  padding: 20px 40px;
-  border-radius: 12px;
-  display: inline-block;
+  margin-bottom: 10px;
+  color: #1b3147;
 }
 
 .hero p {
-  font-size: 1.4rem;
-  margin-bottom: 0;
-  background: rgba(255,255,255,0.9);
-  padding: 10px 24px;
-  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.cta, .cta-secondary {
   display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background: #4bc159;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .18s;
+}
+.cta-secondary {
+  background: #f6f6f6;
+  color: #222;
+  border: 1px solid #e3e3e3;
+  margin-left: 16px;
+}
+.cta:hover, .cta-secondary:hover {
+  background: #30a940;
+  color: #fff;
 }
 
 section {
-  padding: 48px 0 32px 0;
-  max-width: 1050px;
-  margin: 0 auto;
+  padding: 38px 0 22px 0;
 }
 
 h2 {
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #1b3147;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .grid-prestations {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 24px;
+  margin-bottom: 10px;
 }
 
 .grid-prestations .card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 22px 8px 8px 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 18px 6px 8px 6px;
   text-align: center;
 }
 
 .grid-prestations img {
-  height: 130px;
+  height: 90px;
+  width: 90px;
   object-fit: cover;
   border-radius: 7px;
 }
 
 .grid-prestations h3 {
-  margin-top: 12px;
-  font-size: 1.1rem;
+  margin-top: 10px;
+  font-size: 1.04rem;
   font-weight: 600;
+}
+
+.grid-realisations {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+
+.grid-realisations img {
+  height: 120px;
+  width: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+blockquote {
+  background: #f2f2f2;
+  border-left: 4px solid #4bc159;
+  padding: 18px 30px;
+  margin: 0 0 18px 0;
+  font-style: italic;
+  color: #333;
 }
 
 footer {
   background: #161616;
   color: #fafafa;
   text-align: center;
-  padding: 20px 0 8px 0;
+  padding: 18px 0 8px 0;
   font-size: 1rem;
   margin-top: 32px;
+}
+
+footer a {
+  color: #8ee89a;
+  text-decoration: none;
+  margin-left: 10px;
 }
 
 @media (max-width: 900px) {
   .grid-prestations {
     grid-template-columns: repeat(2, 1fr);
   }
+  .grid-realisations {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 600px) {
-  header {
+  header .container {
     flex-direction: column;
     align-items: flex-start;
-    padding: 14px 12px 8px 12px;
+    padding: 10px 0 8px 0;
+  }
+  .logo {
+    height: 40px;
+    margin-bottom: 6px;
+  }
+  nav a {
+    margin-left: 12px;
+    font-size: .99rem;
   }
   .grid-prestations {
     grid-template-columns: 1fr;
     gap: 12px;
   }
   .hero {
-    min-height: 200px;
-    padding-left: 10px;
+    height: 160px;
+    padding: 0;
   }
-  .hero h1, .hero p {
-    padding: 12px 10px;
+  .hero-overlay {
+    padding: 12px 10px 12px 10px;
+  }
+  .hero h1 {
     font-size: 1.2rem;
+    padding: 0;
   }
   section {
-    padding: 16px 0 10px 0;
+    padding: 12px 0 10px 0;
   }
 }

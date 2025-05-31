@@ -131,3 +131,210 @@ nav a.active, nav a:hover {
   border-radius: 9px;
   font-size: 1.15rem;
   margin-top: 5px;
+  box-shadow: 0 2px 14px rgba(34,169,81,0.11);
+  transition: background 0.18s;
+}
+.cta:hover { background: #2e9840; color: #fff; }
+
+/* --- Bloc Réassurance --- */
+.reassurance {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  background: #f4fbff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(60,120,180,0.04);
+  padding: 22px 15px;
+  margin: 30px auto 28px auto;
+  max-width: 1150px;
+}
+
+.reassurance div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 170px;
+}
+
+.reassurance strong {
+  color: #193a48;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.reassurance span {
+  color: #48748c;
+  font-size: 0.97rem;
+}
+
+/* --- Section Générale --- */
+section {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  padding: 0 18px;
+}
+
+/* --- Prestations --- */
+.prestations-section {
+  margin-top: 34px;
+}
+
+.prestations-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 18px;
+  margin-top: 15px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(80,120,130,0.08);
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 250px;
+  text-align: center;
+  padding: 18px 10px 16px 10px;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+
+.card img {
+  width: 90%;
+  max-height: 110px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: #102a38;
+  margin-bottom: 7px;
+}
+
+.card p {
+  color: #3b5361;
+  font-size: 0.97rem;
+  margin-bottom: 0;
+}
+
+.card:hover {
+  box-shadow: 0 4px 24px rgba(16,146,163,0.19);
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* --- CTA Secondaire --- */
+.cta-secondary {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 8px 20px;
+  color: #1092A3;
+  border: 2px solid #1092A3;
+  border-radius: 8px;
+  background: #f9fdff;
+  font-weight: 600;
+  transition: background 0.18s, color 0.18s;
+}
+.cta-secondary:hover {
+  background: #e6f7fa;
+  color: #185e68;
+}
+
+/* --- Réalisations --- */
+.realisations-section {
+  margin-top: 36px;
+}
+.realisations-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.realisations-cards img {
+  width: 200px;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 11px;
+  box-shadow: 0 2px 12px rgba(60,120,180,0.09);
+}
+
+/* --- Avis --- */
+.avis-section {
+  margin-top: 40px;
+}
+.avis-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 13px;
+}
+.avis-card {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 12px rgba(80,120,130,0.08);
+  padding: 22px 22px 12px 22px;
+  flex: 1 1 180px;
+  max-width: 260px;
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.avis-card .stars {
+  color: #4bc159;
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.avis-card p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #3b5361;
+}
+.avis-card .author {
+  color: #868d94;
+  font-size: 0.98rem;
+  align-self: flex-end;
+}
+
+/* --- Footer --- */
+footer {
+  background: #16232e;
+  color: #eaf5fa;
+  text-align: center;
+  padding: 23px 0 11px 0;
+  font-size: 1rem;
+  margin-top: 48px;
+}
+.footer-links a {
+  color: #9cdde6;
+  font-size: 0.99rem;
+  margin-left: 20px;
+}
+
+footer a {
+  color: #c3f9ed;
+  text-decoration: underline dotted;
+}
+footer a:hover { color: #90f8cd; }
+
+/* --- Responsive --- */
+@media (max-width: 1050px) {
+  .prestations-cards, .realisations-cards, .avis-cards, .reassurance {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+  .realisations-cards img { width: 44vw; max-width: 210px; }
+}
+
+@media (max-width: 700px) {
+  header { flex-direction: column; align-items: flex-start; padding: 10px 6vw 6px 6vw; }
+  .logo { height: 43px; margin-right: 10px; }
+  nav { gap: 12px; font-size: 0.98rem; }
+  .hero { min-height: 170px; }
+  .hero-content { padding: 16px 6vw; }
+  .prestations-cards, .realisations-cards, .avis-cards { flex-direction: column; align-items: stretch; }
+  .reassurance { flex-direction: column; align-items: center; gap: 10px; }
+  .card, .avis-card { max-width: 98vw; min-width: 160px; }
+  section { padding: 0 6vw; }
+}

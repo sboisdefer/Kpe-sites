@@ -1,1 +1,97 @@
+:root {
+  --primary: #0d2538;
+  --secondary: #18c3e5;
+  --accent: #45d6c6;
+  --bg: #f9fafb;
+  --card-bg: #fff;
+  --text-main: #18243c;
+  --text-soft: #4a5568;
+  --border: #e0e6ed;
+  --radius: 13px;
+  --shadow: 0 2px 12px 0 rgba(16,30,54,0.06);
+  --nav-height: 64px;
+  --logo-size: 54px;
+  --transition: all 0.22s cubic-bezier(.4,0,.2,1);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
 
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-main);
+}
+
+.top-bar {
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.98rem;
+  letter-spacing: 0.03em;
+  padding: 6px 0;
+}
+
+.top-bar-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.top-bar a {
+  color: #fff;
+  text-decoration: underline dotted;
+  transition: var(--transition);
+}
+.top-bar a:hover {
+  color: var(--secondary);
+}
+
+.main-nav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+}
+
+.nav-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.logo-nav {
+  height: var(--logo-size);
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.main-nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 4px 0 4px 0;
+  position: relative;
+  transition: var(--transition);
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  color: var(--secondary);
+}

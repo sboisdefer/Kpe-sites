@@ -19,11 +19,15 @@ a:hover {
   color: #39c183;
 }
 
-/* HEADER */
+/* HEADER BLANC */
 .main-header {
-  background: #243746;
-  color: #fff;
-  padding: 0 0;
+  background: #fff;
+  color: #203746;
+  box-shadow: 0 2px 18px 0 rgba(50,60,80,0.06);
+  border-bottom: 1px solid #e9eff4;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
 }
 .logo-menu {
   display: flex;
@@ -31,11 +35,12 @@ a:hover {
   justify-content: space-between;
   max-width: 1150px;
   margin: 0 auto;
+  width: 100%;
   padding: 0.6em 0.5em 0.6em 0.5em;
 }
 .logo-kpe {
-  height: 80px;
-  max-width: 130px;
+  height: 90px;
+  max-width: 210px;
   margin-right: 32px;
   object-fit: contain;
   display: block;
@@ -47,8 +52,8 @@ a:hover {
   font-weight: 500;
 }
 .nav-main a {
-  color: #fff;
-  opacity: 0.9;
+  color: #173456;
+  opacity: 1;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
 }

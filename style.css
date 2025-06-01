@@ -1,27 +1,30 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f6fbfd;
-  color: #111;
+  background: #f4f8fa;
+  color: #1c3146;
 }
 
+/* === HEADER === */
 .main-header {
   background: #1c3146;
   padding: 0;
+  min-height: 70px;
 }
 
 .logo-menu {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
   padding: 0 32px;
 }
 
 .logo-kpe {
-  height: 54px;
+  height: 60px;
+  margin: 10px 0;
   display: block;
 }
 
@@ -34,13 +37,58 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.06rem;
-  padding: 6px 0;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-bottom 0.2s;
+  font-size: 1rem;
+  padding: 10px 0;
+  transition: color 0.2s;
+  position: relative;
 }
 
-.nav-main a:hover {
-  color: #2dd3c4;
-  border-bottom: 2px solid #2dd3c4;
+.nav-main a:hover,
+.nav-main a.active {
+  color: #38d9b3;
+}
+
+/* === GÉNÉRAL === */
+h1, h2, h3 {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+a {
+  color: #267d87;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Pour garder une largeur max et centrer les contenus */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* RESET DIVERS */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .logo-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+  }
+  .nav-main {
+    gap: 18px;
+    font-size: 0.95rem;
+  }
+  .logo-kpe {
+    height: 44px;
+    margin: 12px 0 0 0;
+  }
 }

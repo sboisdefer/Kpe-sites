@@ -178,3 +178,65 @@ body {
   background: #17a3c8;
   color: #fff;
 }
+.badges-qualites {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  background: #fff;
+  max-width: 980px;
+  margin: 0 auto 32px auto;
+  padding: 18px 16px 6px 16px;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(19,49,87,0.05);
+  position: relative;
+  top: -38px;
+  z-index: 2;
+}
+
+.badge-qualite {
+  text-align: left;
+  min-width: 155px;
+  max-width: 180px;
+}
+
+.badge-title {
+  color: #16b0a3;
+  font-weight: 700;
+  font-size: 1.06rem;
+  margin-bottom: 4px;
+  display: block;
+  letter-spacing: .02em;
+}
+
+.badge-desc {
+  color: #444;
+  font-size: 0.98rem;
+  display: block;
+  margin-top: 3px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 850px) {
+  .badges-qualites {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 14px 6px 5px 6px;
+    max-width: 98vw;
+  }
+  .badge-qualite {
+    min-width: 135px;
+    font-size: 0.93rem;
+  }
+}
+@media (max-width: 600px) {
+  .badges-qualites {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 8px 2px 2px 2px;
+    margin-bottom: 10px;
+    top: -18px;
+  }
+}

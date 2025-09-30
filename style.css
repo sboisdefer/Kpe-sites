@@ -66,7 +66,7 @@ a:hover {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 330px;
+  min-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,7 +75,7 @@ a:hover {
 }
 .hero-bg {
   width: 100%;
-  height: 320px;
+  height: 450px;
   object-fit: cover;
   display: block;
 }
@@ -86,7 +86,7 @@ a:hover {
   width: 450px;
   max-width: 96vw;
   transform: translate(-50%, -50%);
-  background: rgba(32,48,62,0.93);
+  background: rgba(32,48,62,0.75);
   border-radius: 14px;
   box-shadow: 0 4px 32px 0 rgba(34,42,54,0.16);
   padding: 30px 28px 32px 28px;
